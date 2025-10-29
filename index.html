@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Houston Metro Route Data and Report Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+```
+h1 {
+  margin: 20px 0;
+  color: #333;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 90%;
+  height: 600px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+```
+
+  </style>
+</head>
+<body>
+  <h1>Houston Metro Route Data and Report Dashboard</h1>
+
+  <select id="mapSelect">
+    <option value="https://www.google.com/maps/d/u/0/embed?mid=1Va06P1Led0x7oOVp3qmJ8qCraYdMntM&ehbc=2E312F">Route 85 Antoine</option>
+    <option value="https://www.google.com/maps/d/u/0/embed?mid=12YxmozV1M4R0c1XrgRT5_PT4_epjaE4&ehbc=2E312F">Route 36 Kempwood</option>
+    <option value="https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID_3">Map 3</option>
+  </select>
+
+  <br />
+
+<iframe id = "mapFrame" src="https://www.google.com/maps/d/u/0/embed?mid=1Va06P1Led0x7oOVp3qmJ8qCraYdMntM&ehbc=2E312F" width="640" height="480"></iframe>
+
+
+  <script>
+    const mapSelect = document.getElementById('mapSelect');
+    const mapFrame = document.getElementById('mapFrame');
+
+    mapSelect.addEventListener('change', function () {
+      mapFrame.src = this.value;
+    });
+  </script>
+
+</body>
+</html>
+
+
+
